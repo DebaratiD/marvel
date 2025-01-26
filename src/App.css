@@ -10,8 +10,8 @@
   overflow:hidden;
 }
 #root{
-  background: rgb(58,27,78);
-background: linear-gradient(177deg, rgba(58,27,78,1) 29%, rgba(125,18,18,1) 90%, rgba(231,181,72,1) 100%);
+  background:linear-gradient(180deg, rgba(36, 18, 23, 0.75) 33%, rgba(208, 56, 56, 0.07) 100%), url("/public/marvel-bg.jpg")  no-repeat center fixed, rgb(78,19,37);
+  background-size:cover;
 }
 .heading{
   font-family: "Monda", serif;

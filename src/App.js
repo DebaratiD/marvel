@@ -10,13 +10,13 @@ function App() {
     const [characters, setCharacters] = useState([]);
     const [loading, setLoading] = useState(true);
     const [showCanvas, setshowCanvas] = useState(false);
-    const [welcomeText, setwelcometext] = useState("Welcome to Marvel Characters");
+    const [welcomeText, setwelcometext] = useState("Welcome to M.A.R.V.E.L. Characters");
 
     useEffect(() => {
       const getData = async () =>{
         try{
           let data = await marvelAPI("characters",{
-            limit: 50,
+            limit: 100,
           });
           
          // console.log(data.results[0].thumbnail.path.includes("image_not_available"));
@@ -36,7 +36,7 @@ function App() {
       if(characters.length>0){
          let i=0;
          
-          if(welcomeText.length>"Marvel Characters".length){
+          if(welcomeText.length>"M.A.R.V.E.L. Characters".length){
             for(;i<5;i++){
               setTimeout(()=>setwelcometext(welcomeText.substring(1)),200);
             }
