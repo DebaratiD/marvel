@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Monda:wght@400..700&display=swap');
+
+.App {
+  height: 100vh;
+  width: 90vw;
+  margin: auto;
+  text-align: center;
+  font-size: 30px;
+  padding-top: 20px;
+  overflow:hidden;
+}
+#root{
+  background: rgb(58,27,78);
+background: linear-gradient(177deg, rgba(58,27,78,1) 29%, rgba(125,18,18,1) 90%, rgba(231,181,72,1) 100%);
+}
+.heading{
+  font-family: "Monda", serif;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  color:white;
+    width: 90%;
+    z-index: 2;
+    position: absolute;
+}
+
+.canvasSize{
+  height: 110%!important;
+  width: 60%!important;
+  float: right;
+}
+
+.nav-buttons{
+  width:60%;
+  display: flex;
+  justify-content:space-evenly;
+}
+.nav-buttons button{
+  border: 0px;
+  background: transparent;
+  font-size: 30px;
+  &:disabled{
+    opacity:0.5;
+  }
+}
+.cardView{
+  top:10%;
+  opacity: 1;
+    position: absolute;
+    width: 90%;
+    z-index: 2;
+    transform: none;
+    height:85%;
+  
+}
+.cardDiv{
+  display: flex;
+  justify-content:space-between;
+  gap:30px;
+  height:95%;
+  overflow:hidden;
+}
+.cardInfo{
+  flex-basis: 45%;
+  margin: auto 0;
+  font-size:16px;
+  display: flex;
+    flex-direction: column
+}
+
+.cardInfo2{
+  flex-basis: 25%;
+  max-width:25%;
+  margin: auto 0;
+  font-size:16px;
+}
+.align-center{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+
+.align-end{
+  display:flex;
+  align-items:center;
+  justify-content:end;
+}
+
+.card{
+  padding:2%;
+  margin:10px;
+}
+
+.glass{
+  color: white;
+  /* From https://css.glass */
+background: rgba(255, 255, 255, 0.24);
+border-radius: 16px;
+backdrop-filter: blur(4.9px);
+-webkit-backdrop-filter: blur(4.9px);
+border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+.full-screen{
+  height:100%;
+  width:100%;
+}
+.comicsDiv{
+  scrollbar-width: none; /* For Firefox */
+  -ms-overflow-style: none;
+  overflow-y:scroll;
+  max-height:20vh;
+}
+.comicsDiv::-webkit-scrollbar {
+  display: none; /* For Chrome, Safari, and Opera */
+}
+
+.motion-link {
+  color: white; /* Default color */
+  text-decoration: none;
+}
+
+.motion-link:visited {
+  color: lightlink; /* Change color after the link is visited */
+}
+.copyright{
+  position:fixed;
+  bottom:0;
+  text-decoration:none;
+  right:10px;
+  display: flex;
+      font-size: 20px;
+    color: white;
+}
