@@ -7,28 +7,32 @@
   text-align: center;
   font-size: 30px;
   padding-top: 20px;
+  overflow:hidden;
 }
 #root{
-  background: rgb(73,27,103);
-  background: linear-gradient(176deg, rgba(73,27,103,1) 4%, rgba(200,59,59,1) 55%, rgb(205, 184, 31) 100%);
+  background: rgb(58,27,78);
+background: linear-gradient(177deg, rgba(58,27,78,1) 29%, rgba(125,18,18,1) 90%, rgba(231,181,72,1) 100%);
 }
 .heading{
   font-family: "Monda", serif;
   font-optical-sizing: auto;
   font-weight: bold;
   color:white;
+    width: 90%;
+    z-index: 2;
+    position: absolute;
 }
 
 .canvasSize{
-  width: 40%;
-  height: 85%;
+  height: 110%!important;
+  width: 60%!important;
   float: right;
 }
 
 .nav-buttons{
-  width:40%;
+  width:60%;
   display: flex;
-  justify-content:space-evenly;;
+  justify-content:space-evenly;
 }
 .nav-buttons button{
   border: 0px;
@@ -39,6 +43,7 @@
   }
 }
 .cardView{
+  top:10%;
   opacity: 1;
     position: absolute;
     width: 90%;
@@ -52,12 +57,21 @@
   justify-content:space-between;
   gap:30px;
   height:95%;
+  overflow:hidden;
 }
 .cardInfo{
-  flex-basis: 60%;
-  padding:2%;
+  flex-basis: 45%;
   margin: auto 0;
-  font-size:20px;
+  font-size:16px;
+  display: flex;
+    flex-direction: column
+}
+
+.cardInfo2{
+  flex-basis: 25%;
+  max-width:25%;
+  margin: auto 0;
+  font-size:16px;
 }
 .align-center{
   display:flex;
@@ -72,7 +86,12 @@
   justify-content:end;
 }
 
-.card {
+.card{
+  padding:2%;
+  margin:10px;
+}
+
+.glass{
   color: white;
   /* From https://css.glass */
 background: rgba(255, 255, 255, 0.24);
@@ -85,4 +104,31 @@ border: 1px solid rgba(255, 255, 255, 0.3);
 .full-screen{
   height:100%;
   width:100%;
+}
+.comicsDiv{
+  scrollbar-width: none; /* For Firefox */
+  -ms-overflow-style: none;
+  overflow-y:scroll;
+  max-height:20vh;
+}
+.comicsDiv::-webkit-scrollbar {
+  display: none; /* For Chrome, Safari, and Opera */
+}
+
+.motion-link {
+  color: white; /* Default color */
+  text-decoration: none;
+}
+
+.motion-link:visited {
+  color: lightlink; /* Change color after the link is visited */
+}
+.copyright{
+  position:fixed;
+  bottom:0;
+  text-decoration:none;
+  right:10px;
+  display: flex;
+      font-size: 20px;
+    color: white;
 }

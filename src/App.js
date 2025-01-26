@@ -9,6 +9,7 @@ import ThreeCanvas from './components/ThreeCanvas';
 function App() {
     const [characters, setCharacters] = useState([]);
     const [loading, setLoading] = useState(true);
+    const [showCanvas, setshowCanvas] = useState(false);
     const [welcomeText, setwelcometext] = useState("Welcome to Marvel Characters");
 
     useEffect(() => {
@@ -42,6 +43,7 @@ function App() {
           }
           else{
             setLoading(false);
+            setTimeout(()=>setshowCanvas(true),4000);
           }
       }
      
@@ -86,7 +88,8 @@ function App() {
               </>
                 
             )}
-      {!loading && <ThreeCanvas />}
+      {!loading && showCanvas && <ThreeCanvas />}
+      {!loading && <motion.a className="copyright" href='https://github.com/DebaratiD' target='_blank'><p>&copy;</p>DebaratiDatta</motion.a>}
     </div>
   );
 }
