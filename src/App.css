@@ -1,38 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Monda:wght@400..700&display=swap');
+
 .App {
+  height: 100vh;
+  width: 90vw;
+  margin: auto;
   text-align: center;
+  font-size: 30px;
+  padding-top: 20px;
+}
+#root{
+  background: rgb(73,27,103);
+  background: linear-gradient(176deg, rgba(73,27,103,1) 4%, rgba(200,59,59,1) 55%, rgb(205, 184, 31) 100%);
+}
+.heading{
+  font-family: "Monda", serif;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  color:white;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.canvasSize{
+  width: 40%;
+  height: 85%;
+  float: right;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.nav-buttons{
+  width:40%;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content:space-evenly;;
+}
+.nav-buttons button{
+  border: 0px;
+  background: transparent;
+  font-size: 30px;
+  &:disabled{
+    opacity:0.5;
+  }
+}
+.cardView{
+  opacity: 1;
+    position: absolute;
+    width: 90%;
+    z-index: 2;
+    transform: none;
+    height:85%;
+  
+}
+.cardDiv{
+  display: flex;
+  justify-content:space-between;
+  gap:30px;
+  height:95%;
+}
+.cardInfo{
+  flex-basis: 60%;
+  padding:2%;
+  margin: auto 0;
+  font-size:20px;
+}
+.align-center{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+
+.align-end{
+  display:flex;
+  align-items:center;
+  justify-content:end;
+}
+
+.card {
   color: white;
+  /* From https://css.glass */
+background: rgba(255, 255, 255, 0.24);
+border-radius: 16px;
+backdrop-filter: blur(4.9px);
+-webkit-backdrop-filter: blur(4.9px);
+border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.full-screen{
+  height:100%;
+  width:100%;
 }
