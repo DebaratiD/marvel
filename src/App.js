@@ -53,13 +53,13 @@ function App() {
 
   return (
     <div className="App" id="canvas-container">
-
+       
        <AnimatePresence>
                 {loading && (
                   
                     <motion.h1 className='heading'
                         initial={{ opacity: 0, y: 450 }}
-                        animate={{ opacity: 1, y: 350 }}
+                        animate={{ opacity: 1, y: 350, transition:{duration:5} }}
                         exit={{  opacity:0, y: 100 }}
                         transition={{ duration: 1.2, ease: 'easeInOut' }}
                     >
